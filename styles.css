@@ -267,6 +267,10 @@ h6 {
 
 .logo__icon {
     font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(3px);
 }
 
 .nav__list {
