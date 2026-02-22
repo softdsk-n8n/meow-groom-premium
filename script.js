@@ -68,8 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: Stop observing once revealed
-                // observer.unobserve(entry.target);
             }
         });
     };
@@ -80,6 +78,61 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
-
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // 6. Custom Mouse Glow Cursor Effect (Desktop only)
+    const cursorGlow = document.querySelector('.cursor-glow');
+    
+    // Only apply complex JS animations if user prefers motion and is likely on desktop
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.innerWidth <= 1024;
+
+    if (cursorGlow && !prefersReducedMotion && !isMobile) {
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+
+        // Interactive states for hoverable elements
+        const hoverElements = document.querySelectorAll('a, button, .service-card');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorGlow.style.width = '600px';
+                cursorGlow.style.height = '600px';
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(255, 51, 102, 0.12) 0%, rgba(0,0,0,0) 70%)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorGlow.style.width = '400px';
+                cursorGlow.style.height = '400px';
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, rgba(0,0,0,0) 70%)';
+            });
+        });
+    }
+
+    // 7. 3D Tilt Hover Effect for Cards and Hero Image
+    if (!prefersReducedMotion && !isMobile) {
+        const tiltElements = document.querySelectorAll('.service-card, .hero__image-wrapper');
+        
+        tiltElements.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within the element
+                const y = e.clientY - rect.top;  // y position within the element
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // Calculate rotation (max 8 degrees to keep it premium and subtle)
+                const rotateX = ((y - centerY) / centerY) * -8;
+                const rotateY = ((x - centerX) / centerX) * 8;
+                
+                el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                // Reset transform smoothly
+                el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        });
+    }
 });
