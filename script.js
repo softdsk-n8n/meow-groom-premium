@@ -109,9 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. 3D Tilt Hover Effect for Cards and Hero Image
+    // 7. 3D Tilt Hover Effect for Cards, Hero Image, and Benefits Image
     if (!prefersReducedMotion && !isMobile) {
-        const tiltElements = document.querySelectorAll('.service-card, .hero__image-wrapper');
+        const tiltElements = document.querySelectorAll('.service-card, .hero__image-wrapper, .benefits__image-wrapper');
         
         tiltElements.forEach(el => {
             el.addEventListener('mousemove', (e) => {
