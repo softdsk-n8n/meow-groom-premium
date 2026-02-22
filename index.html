@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МяуГрум | Премиальный мобильный груминг</title>
+    <meta name="description"
+        content="Эксклюзивный груминг для кошек на дому. Индивидуальный подход, премиум-косметика и никакого стресса для вашего питомца.">
+
+    <!-- Google Fonts: Space Grotesk for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <span class="logo__icon">✨</span>
+                <span class="logo__text">Мяу<span class="highlight-text">Грум</span></span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#services" class="nav__link">Услуги</a></li>
+                    <li class="nav__item"><a href="#benefits" class="nav__link">Почему мы</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link btn btn-secondary"
+                            style="padding: 10px 24px; font-size: 0.95rem;">Записаться</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content reveal-up">
+                <div class="hero__badge">
+                    <span class="hero__badge-dot"></span>
+                    Свободные слоты на сегодня
+                </div>
+                <h1 class="hero__title">
+                    Премиум уход<br>
+                    <span class="highlight-secondary">у вас дома</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Эксклюзивный подход к вашему пушистому другу. Без клеток, без стресса, с использованием
+                    люкс-косметики и новейшего оборудования.
+                </p>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn-primary">Вызвать мастера</a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-item__num">1000+</div>
+                        <div class="stat-item__label">Довольных котиков</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-item__num">5.0</div>
+                        <div class="stat-item__label">Средняя оценка</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__image reveal-up" style="transition-delay: 0.2s;">
+                <div class="hero__image-wrapper">
+                    <!-- Заглушка, пока моделька генерирует новую 3D иллюстрацию. Или можно сразу подставить файл hero_cat_nano.png -->
+                    <img src="hero_cat_nano.png" alt="3D Кот Груминг"
+                        onerror="this.src='https://via.placeholder.com/600x600/0F1115/00E5FF?text=Nano+Banana+Cat'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Искусство <br><span class="highlight-text">преображения</span></h2>
+                <p class="section-desc">Каждая процедура адаптирована под породу, тип шерсти и характер вашего питомца.
+                </p>
+            </div>
+
+            <div class="services__grid">
+                <!-- Card 1 -->
+                <div class="service-card reveal-up">
+                    <div class="service-card__icon">✂️</div>
+                    <h3 class="service-card__title">Авторская Стрижка</h3>
+                    <p class="service-card__desc">Элегантная гигиеническая или модельная стрижка с учетом анатомии
+                        кошки.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="service-card__icon">✨</div>
+                    <h3 class="service-card__title">Деликатная Линька</h3>
+                    <p class="service-card__desc">Трехэтапное вычесывание. Избавляем дом от шерсти, сохраняя красоту
+                        шубки.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="service-card__icon">🛁</div>
+                    <h3 class="service-card__title">SPA & Купание</h3>
+                    <p class="service-card__desc">Премиум-косметика без слез, озонотерапия и бесшумная сушка.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits (Sticky Storytelling) -->
+    <section id="benefits" class="benefits section-padding">
+        <div class="container container--sm">
+            <div class="benefits__grid">
+
+                <div class="benefits__content">
+                    <div class="benefit-item reveal-up">
+                        <div class="benefit-item__num">01</div>
+                        <h3 class="benefit-item__title">Зона комфорта</h3>
+                        <p class="benefit-item__desc">Животное остается на своей территории. Никаких пугающих запахов
+                            клиники и незнакомых собак рядом.</p>
+                    </div>
+                    <div class="benefit-item reveal-up">
+                        <div class="benefit-item__num">02</div>
+                        <h3 class="benefit-item__title">Ваше время</h3>
+                        <p class="benefit-item__desc">Никаких пробок и часов ожидания в салоне. Занимайтесь своими
+                            делами, пока мастер творит магию.</p>
+                    </div>
+                    <div class="benefit-item reveal-up">
+                        <div class="benefit-item__num">03</div>
+                        <h3 class="benefit-item__title">Стерильно</h3>
+                        <p class="benefit-item__desc">Мы используем одноразовые материалы и убираем всю шерсть после
+                            процедур. Ваш дом останется безупречным.</p>
+                    </div>
+                </div>
+
+                <div class="benefits__image-wrapper reveal-up" style="transition-delay: 0.2s;">
+                    <!-- 3D Illustration placeholder -->
+                    <div class="benefits__image-placeholder">💎</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="contact" class="booking">
+        <div class="booking__wrapper reveal-up">
+            <div class="booking__info">
+                <h2 class="booking__title">Готовы к <span class="highlight-secondary">SPA</span>?</h2>
+                <p class="booking__subtitle">Оставьте данные, и наш консьерж свяжется с вами для подбора идеального
+                    времени.</p>
+
+                <div class="contact-details">
+                    <p><span>📞</span> +7 (999) 000-00-00</p>
+                    <p><span>✉️</span> vip@meowgroom.com</p>
+                </div>
+            </div>
+
+            <form class="form" id="bookingForm" onsubmit="return false;">
+
+                <div class="form__group">
+                    <input type="text" id="name" class="form__input" required>
+                    <label for="name" class="form__label">Как к вам обращаться?</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="tel" id="phone" class="form__input" required>
+                    <label for="phone" class="form__label">Ваш телефон</label>
+                </div>
+
+                <div class="form__group">
+                    <select id="service" class="form__select" required>
+                        <option value="" disabled selected></option>
+                        <option value="full">Комплексный VIP уход</option>
+                        <option value="haircut">Только стрижка</option>
+                        <option value="spa">SPA и Вычесывание</option>
+                    </select>
+                    <label for="service" class="form__label">Желаемая услуга</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Подтвердить
+                    заявку</button>
+                <div class="form__success" id="formMessage" style="display: none;">
+                    Заявка принята. Ожидайте звонка! ✨
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a href="#" class="logo">
+                    <span class="logo__icon">✨</span>
+                    <span class="logo__text">Мяу<span class="highlight-text">Грум</span></span>
+                </a>
+                <p class="footer__desc">Мобильный груминг премиум-класса для самых важных членов вашей семьи.</p>
+            </div>
+
+            <div class="footer__socials">
+                <a href="#" class="social-link">IN</a>
+                <a href="#" class="social-link">TG</a>
+                <a href="#" class="social-link">WA</a>
+            </div>
+
+            <div class="footer__copy">
+                <div>&copy; <span id="year"></span> MeowGroom. All rights reserved.</div>
+                <div class="footer__links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
